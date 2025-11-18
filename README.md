@@ -233,6 +233,7 @@ SwiftNodes is already being used in production, but [Codeface](https://codeface.
    3. Add general purpose graph traversal algorithms (BFT, DFT, compatible with potentially cyclic graphs)
    4. Add better ways of topological sorting
    5. Approximate the [minimum feedback arc set](https://en.wikipedia.org/wiki/Feedback_arc_set), so Codeface can guess "faulty" or unintended dependencies, i.e. the fewest dependencies that need to be cut in order to break all cycles.
-4. Possibly optimize performance – but only based on measurements and only if measurements show that the optimization yields significant acceleration. Optimizing the algorithms might be more effective than optimizing the data structure itself.
+4. Make Graph conform to Collection, Sequence, RandomAccessCollection, SetAlgebra, etc. … Look into conformances of used collections OrderedSet and OrderedDictionary …
+5. Possibly optimize performance – but only based on measurements and only if measurements show that the optimization yields significant acceleration. Optimizing the algorithms might be more effective than optimizing the data structure itself.
     * What role can `@inlinable` play here?
     * What role can [`lazy`](https://developer.apple.com/documentation/swift/sequence/lazy) play here?
